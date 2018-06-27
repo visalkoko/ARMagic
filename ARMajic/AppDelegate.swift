@@ -13,9 +13,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow()
+        window?.makeKeyAndVisible()
+        let gameViewController = GameViewController()
+        window?.rootViewController = gameViewController
+        
+        // disable the timer
+        UIApplication.shared.isIdleTimerDisabled = true
+        
+        
         return true
     }
 
